@@ -36,4 +36,11 @@ public class Transaction {
         System.arraycopy(b, 0, c, lenA, lenB);
         return c;
     }
+    
+    public static boolean isValid(byte[] hash) {
+		if (hash[0] == (int)'B' && hash[1] == (int)'U' && hash[558] == (int)'Z' && hash[559] == (int)'Z')
+			return true;
+		else
+			return false;
+	}
 }
